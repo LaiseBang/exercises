@@ -3,7 +3,7 @@ Hint: use indexOf and substring (avoid substr, it is being deprecated).
 Expect the name to be a const - you can’t modify it.*/
 
 "use strict";
-const fullName = "Peter Heronimous Lind";
+const fullName = "Laise Bang Henriksen";
 
 const firstSpace = fullName.indexOf(" ");
 const secondSpace = fullName.indexOf(" ", firstSpace + 1);
