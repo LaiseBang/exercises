@@ -12,8 +12,13 @@ const firstName = fullName.substring(0, firstSpace);
 const middleName = fullName.substring(firstSpace + 1, secondSpace);
 const lastName = fullName.substring(secondSpace + 1);
 
-/*console.log(`First space at ${firstSpace}`);
-console.log(`Second space at ${secondSpace}`);*/
+console.log(`First space at ${firstSpace}`);
+console.log(`Second space at ${secondSpace}`);
 console.log(firstName);
 console.log(middleName);
 console.log(lastName);
+
+console.log(`
+First name : ${firstName}
+Middle name: ${middleName}
+Last name: ${lastName}`);
