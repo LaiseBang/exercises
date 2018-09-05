@@ -1,0 +1,26 @@
+body {
+  margin: 0;
+}
+.bar {
+  height: 100px;
+  width: calc(100% / 40);
+  background-color: blueviolet;
+  border: 1px black solid;
+}
+#bars {
+  display: flex;
+  align-items: flex-end;
+  animation-name: smooth;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes smooth {
+  from {
+    left: calc(100% / 40);
+  }
+  to {
+    left: 0;
+  }
+}
