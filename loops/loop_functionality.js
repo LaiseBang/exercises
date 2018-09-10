@@ -9,7 +9,8 @@ const weasleys = [
   "Fred",
   "George",
   "Ron",
-  "Ginny"
+  "Ginny",
+  "Fred"
 ];
 
 //display an array
@@ -55,7 +56,7 @@ display(weasleys);
 
 // find the indexOf for Fred
 let idx = indexOf(weasleys, "Fred");
-//console.log(idx);
+console.log(idx);
 
 //replace Fred with me
 replace(weasleys, "Fred", "Laise");
