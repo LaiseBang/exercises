@@ -1,18 +1,17 @@
 "use strict";
+let studentsJson;
+hentJson();
 
 //FETCH Json
-//let jsonData = fetch("students.json");
-
-//Mock jsonData
-const jsonData = [
-  "Hannah Abbot",
-  "Susan Bones",
-  "Justin Finch-Fletchly",
-  "Ernie Macmillian",
-  "Megan Jones",
-  "Wayne Hopkins",
-  "Leanne -unknown-"
-];
+async function hentJson() {
+  let jsonData = await fetch("students.json");
+  studentsJson = await jsonData.json();
+  //console.log(studentsJson);
+  createStudents("Gryffindor");
+  createStudents("Hufflepuff");
+  createStudents("Ravenclaw");
+  createStudents("Slytherin");
+}
 
 const students = [];
 
@@ -31,33 +30,36 @@ const StudentTemplate = {
   }
 };
 
+//const house = object.keys(jasonData);
+//console.log(house);
 let newStudent;
 
-createStudents();
-
 //FUNCTION that creates students from json to template
-function createStudents() {
-  jsonData.forEach(createASingleStudent);
-}
-function createASingleStudent(name) {
-  const newStudent = Object.create(StudentTemplate);
+function createStudents(house) {
+  console.log(studentsJson);
+  studentsJson[house].forEach(createASingleStudent);
 
-  newStudent.splitName(name);
-
-  students.push(newStudent);
-  //console.log(newStudent);
+  function createASingleStudent(name) {
+    const newStudent = Object.create(StudentTemplate);
+    newStudent.splitName(name);
+    newStudent.house = house;
+    students.push(newStudent);
+    console.log(newStudent);
+  }
 }
 
 //FUNCTION that sorts list according to firstname
 function sortByFirstName(a, b) {
   if (a.firstName < b.firstName) {
     return -1;
-  } else {
+  } else if (a.firstName > b.firstName) {
     return 1;
+  } else {
+    return 0;
   }
 }
 const studentsByfirstname = students.sort(sortByFirstName);
-console.table(studentsByfirstname);
+console.log(students);
 
 //FUNCTION that sorts list according to lastname
 function sortByLastName(a, b) {
