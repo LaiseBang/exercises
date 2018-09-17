@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        svg {
+            background-color: rgb(6, 211, 101);
+            width: 500px;
+        }
+
+        .car_body {
+            fill: red;
+        }
+
+        .light {
+            fill: yellow;
+        }
+
+        circle {
+            stroke-width: 0.7;
+        }
+
+        line {
+            stroke: darkslategray;
+        }
+
+        .inner_wheel {
+            fill: silver;
+            stroke: gray;
+        }
+
+        #road {
+            fill: gray;
+        }
+
+        #car {
+            animation: move 2s 1s 1 ease-in;
+            animation-fill-mode: forwards;
+            transform: skew(5deg, -7deg);
+        }
+
+        @keyframes move {
+            100% {
+                transform: translate(100%, -25%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <svg viewBox="0 0 110 110">
+        <g id="road">
+            <polygon points="0 70, 110 40, 110 80, 0 110, 0 65" />
+
+        </g>
+        <g id="car">
+            <rect class="car_body" x="8" y="55" rx="5" width="75" height="20"></rect>
+            <ellipse class="car_body" cx="35" cy="57" rx="27" ry="18" />
+            <ellipse class="light" cx="81" cy="63" rx="2" ry="4" />
+            <polygon class="light" points="81 63, 95 55, 95 68, 81 64" />
+            <g id="wheels">
+                <circle r="8" cx="65" cy="75"></circle>
+                <circle class="inner_wheel" r="6" cx="65" cy="75"></circle>
+                <circle r="8" cx="25" cy="75"></circle>
+                <circle class="inner_wheel" r="6" cx="25" cy="75"></circle>
+            </g>
+        </g>
+        <!-- <line x1="10" x2="90" y1="10" y2="90"></line> -->
+    </svg>
+</body>
+
+</html>
