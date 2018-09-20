@@ -1,0 +1,7 @@
+#app > div {
+  border: 1px solid black;
+  background-color: lightpink;
+  float: left;
+  width: 50px;
+  height: 50px;
+}

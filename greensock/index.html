@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GSAP</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class=" box box1"></div>
+    <div class=" box box2"></div>
+    <div class=" box box3"></div>
+    <div class=" box box4"></div>
+
+    <!--     <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li>
+    <li>hi mom</li> -->
+
+    <div id="app">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <!-- script tag in the body, because it doesnt have to be used before the page is loaded -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+    <script>
+        /* TweenMax.to("div:nth-child(2)", 2, { x: 100 })*/
+        TweenMax.to("li", 2, {
+            x: 100,
+            y: 50
+        })
+
+        TweenMax.to("li:nth-child(odd)", 5, {
+            rotate: -10,
+            color: "red"
+        })
+
+        TweenMax.from("#app>div:nth-child(odd)", 3, { x: 250 });
+        TweenMax.from("#app>div:nth-child(even)", 3, { x: -500 });
+        /* TweenMax.from("#app>div:nth-child(3n+2)", 3, { y: 500 });*/
+        TweenMax.from("#app>div:nth-child(3n+3)", 3, { y: -250 });
+
+        TweenMax.to("#app>div:nth-child(odd)", 5, {
+            rotate: 360,
+            backgroundColor: "red"
+        })
+
+    </script>
+</body>
+
+</html>

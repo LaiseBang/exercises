@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        svg {
+            /*find clip-path on: https://bennettfeely.com/clippy/
+            clip-path: polygon(0 55%, 34% 15%, 85% 58%, 33% 91%);
+            animation: morph 5s;*/
+        }
+
+        /*   @keyframes morph {
+            to {
+                clip-path: polygon(0 55%, 34% 15%, 100% 27%, 71% 100%);
+            }
+        }*/
+    </style>
+</head>
+
+<body>
+    <svg viewBox="0 0 200 200">
+
+    </svg>
+    <script>
+        const data = [23, 56, 21, 87, 45, 23, 12, 65, 34];
+        const NS = "http://www.w3.org/2000/svg";
+        const svg = document.querySelector("svg");
+
+        let xaxis = 0;
+        let color = "";
+
+        makesRects();
+        function makesRects() {
+            data.forEach(element => {
+                let R = Math.floor(Math.random() * 256);
+                let G = Math.floor(Math.random() * 256);
+                let B = Math.floor(Math.random() * 256);
+                color = "rgb(" + R + "," + G + "," + B + ")";
+                console.log(R, G, B);
+                console.log(color);
+                const rect = document.createElementNS(NS, "rect");
+                rect.setAttribute("x", xaxis);
+                rect.setAttribute("y", 100 - element);
+                rect.setAttribute("width", 20);
+                rect.setAttribute("height", element);
+                rect.setAttribute("fill", color);
+
+                //forslag fra Jonas kræver et for loop
+                // rect.setAttribute("fill", `hsl(${Math.floor(Math.random() * 100)} 100%, 50%`);
+                // rect.setAttribute("fill", `hsl(${i * 10}, 70%, 70%)`);
+
+
+                xaxis += 20;
+                svg.appendChild(rect);
+            });
+
+        }
+    </script>
+
+</body>
+
+</html>
