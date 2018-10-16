@@ -10,16 +10,13 @@
 
 <body>
     <h1>Input type="week"</h1>
-    <p>This is a demonstration of <b>week</b> - before getting started,
-        replace all references to <b>week</b> with the element you are
-        demonstrating. And also rename the file! And change this text to be a
-        short description of the <b>week</b></p>
+    <p>Alows you to pick a weeknumber in the year</p>
 
     <form action="receiver.php">
         <!-- You probably have to add more attributes to the form -->
-        <p>What week would you like to start?</p> <input type="week">
+        <p>What week would you like to start?</p> <input type="week" name="actualweek">
 
-        <input type="submit"> <!-- and to the submit-button ... -->
+        <input type="submit" name="submit"> <!-- and to the submit-button ... -->
     </form>
     <h2>Used for:</h2>
     <p>Creating input fields allowing to pick weeknumber in a year. In chrome and Opera you get a pop-up calender to
