@@ -1,0 +1,76 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.button {
+  grid-column-start: 1;
+  margin: 10px;
+  grid-column: auto;
+  color: gray;
+}
+
+#container {
+  display: grid;
+  grid-gap: 5px;
+  grid-template: auto / repeat(4, auto);
+  justify-content: start;
+}
+
+/* input [type="text"] {
+  width: 16em;
+} */
+
+#container > div {
+  display: contents;
+}
+
+.subscribtion label {
+  display: block;
+}
+
+#subscription {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+#subscription input {
+  justify-content: start;
+}
+.terms {
+  grid-column-start: 1;
+  grid-column: span 3;
+}
+
+/*makes the sign * visable in the required firld*/
+:required + .required::after {
+  color: red;
+  content: "*";
+}
+/* put a v after the input if the input is valid ":not(:placeholder-shown" is used if input is not required then the v will be shown all the time */
+#container input:valid:not(:placeholder-shown) ~ .correct::after {
+  content: "✅";
+}
+
+#container input:invalid:not(:placeholder-shown) ~ .correct::after {
+  content: "❌";
+}
+
+/* puts a red line around the submit button when it has been clicked */
+input[type="submit"]:active {
+  background-color: pink;
+}
+
+#form:valid .button {
+  background: green;
+  transform: scale(1.2);
+  border-radius: 15px;
+  border-color: green;
+  color: antiquewhite;
+}
+
+#form {
+  border: 2px solid gray;
+  padding: 15px;
+  max-width: fit-content;
+}
