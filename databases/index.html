@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- input -->
+    <form>
+        <label>
+            Name: <input type="text" name="name">
+        </label>
+        <label>
+            Content: <textarea name="content" cols="30" rows="10"></textarea>
+        </label>
+        <input type="submit" name="Save" value="Send">
+    </form>
+
+    <!-- edit -->
+    <form id="updateForm">
+        <label>
+            Name: <input type="text" name="name">
+        </label>
+        <label>
+            Content: <textarea name="content" cols="30" rows="10"></textarea>
+        </label>
+        <input type="hidden" name="id" id="formId">
+        <input type="submit" name="submit" value="Accept changes">
+    </form>
+    <main></main>
+    <template id="messageTemplate">
+        <article data-id>
+            <header>
+                <h2>{NAME}</h2>
+                <p>{createdAt}</p>
+            </header>
+            <div id="content">{Content}</div> <br>
+            <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
+            <hr>
+        </article>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
