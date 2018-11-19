@@ -1,0 +1,40 @@
+.userStatus {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   border: 5px solid black;
+   /*background-color: aqua;*/ 
+}
+
+
+h2 {
+   grid-column: 1/2;
+}
+
+p {
+  grid-column: 2/3;
+}
+
+header {
+   position: absolute;
+   top: 0%; 
+   height: 50px;
+   background-color: aquamarine;
+}
+
+.sign_in{
+   color: blueviolet;
+   cursor: pointer;
+}
+.sign_up{
+   color: orange;
+   cursor: pointer;
+}
+
+button{
+   margin-top: 500px;
+}
+
+#submitUserName,
+#newUser{
+   display: none;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <template id="sign_in_up">
+            <p>Do you want to <span class="sign_in"> sign in </span>as an existing user, or <span class="sign_up"> sign
+                    up </span>as a new user?</p>
+        </template>
+    </header>
+
+    <form action="" method="GET" id="submitUserName">
+        <p>Username: <input type="text"> <input type="submit" id="submitUserNameButton"></p>
+    </form>
+
+    <form action="" method="GET" id="newUser">
+        <p>Username: <input type="text"></p>
+        <p>Password: <input type="text" name="" id="code"></p>
+        <input type="submit" id="newUserButton">
+    </form>
+
+
+    <!-- <h1>Create userlist</h1> -->
+    <div class="sign"></div>
+    <div class="userReciever"></div>
+
+    <div class="statusReciever"></div>
+
+    <!--  <template id="templateUser">
+        <div class="userStatus">
+            <h2>NAME</h2>
+            <p>status-id</p>
+            <div class="status"></div>
+        </div>
+    </template> -->
+
+    <template id="templateStatus">
+        <div class="userStatus">
+            <p class="userId">user-ID</p>
+            <h2 class="userName">NAME</h2>
+            <p class="statusId">ID-ID</p>
+            <div class="status">TEXT</div>
+        </div>
+
+    </template>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
